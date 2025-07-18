@@ -16,6 +16,7 @@ app.post("/api/download", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("🚀 Server berjalan di http://localhost:5000");
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`🚀 Server berjalan di http://localhost:${port}`);
 });
